@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bluelink - Mi Primera Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0288d1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #03a9f4;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #0288d1;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .card {
+            background-color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background-color: #03a9f4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0288d1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenido a Bluelink</h1>
+    <p>Mi primera página web con Bluefish</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#acerca">Acerca</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<main>
+    <section class="card" id="inicio">
+        <h2>Inicio</h2>
+        <p>Esta es una página de ejemplo creada con HTML y CSS. ¡Experimenta con Bluefish!</p>
+        <button onclick="alert('¡Hola desde Bluelink!')">Haz clic aquí</button>
+    </section>
+
+    <section class="card" id="acerca">
+        <h2>Acerca de Bluelink</h2>
+        <p>Bluelink es un proyecto de prueba para aprender a crear páginas web con Bluefish en Ubuntu.</p>
+    </section>
+
+    <section class="card" id="contacto">
+        <h2>Contacto</h2>
+        <p>Correo: ejemplo@bluelink.com</p>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Bluelink. Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
