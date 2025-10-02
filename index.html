@@ -1,11 +1,218 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta content="text/html; charset=ISO-8859-1"
-http-equiv="content-type">
-<title>paginaweb</title>
+    <meta charset="UTF-8">
+    <title>Mi Web Compleja - KompoZer</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Cabecera y navegación */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff9800;
+        }
+
+        main {
+            padding: 140px 20px 40px 20px; /* Ajuste por header fijo */
+        }
+
+        /* Carrusel */
+        .carousel {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .slides {
+            display: flex;
+            width: 300%;
+            animation: slide 12s infinite;
+        }
+
+        .slides img {
+            width: 100%;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0%); }
+        }
+
+        /* Secciones */
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Tarjetas */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Formulario */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background-color: #ff9800;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-pagina web<br>
-<br>
+
+<header>
+    <h1>Mi Web Compleja</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<main>
+    <!-- Carrusel -->
+    <section id="inicio">
+        <div class="carousel">
+            <div class="slides">
+                <img src="https://via.placeholder.com/900x300/ff9800/ffffff?text=Slide+1" alt="Slide 1">
+                <img src="https://via.placeholder.com/900x300/03a9f4/ffffff?text=Slide+2" alt="Slide 2">
+                <img src="https://via.placeholder.com/900x300/4caf50/ffffff?text=Slide+3" alt="Slide 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de servicios / tarjetas -->
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Diseño Web</h3>
+                <p>Creamos páginas modernas y responsivas para tu negocio.</p>
+            </div>
+            <div class="card">
+                <h3>Marketing</h3>
+                <p>Optimización SEO y campañas digitales efectivas.</p>
+            </div>
+            <div class="card">
+                <h3>Soporte</h3>
+                <p>Asistencia técnica rápida y confiable para tus proyectos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form onsubmit="alert('Formulario enviado (simulado)'); return false;">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo" required>
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Mi Web Compleja. Todos los derechos reservados.
+</footer>
+
 </body>
 </html>
